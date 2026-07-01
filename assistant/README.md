@@ -14,7 +14,7 @@ This folder holds the instructions used to train an external assistant — **CIn
 | `total_rainfall.md` | `a_Total_rainfall.ipynb` |
 | `consecutive_dry_days.md` | `b_Consecutive_dry_days.ipynb` |
 | `heavy_rainfall.md` | `c_Heavy_rainfall.ipynb` |
-| `functions_api.md` | Callable functions in `functions/` |
+| `functions_api.md` | Callable functions, `indicators_setup` discovery, `plot_bar_probs` |
 | `output_conventions.md` | Figure / table naming and folders |
 | `data_sources.md` | GHCN-Daily, ONI, units, citations |
 
@@ -29,7 +29,7 @@ This folder holds the instructions used to train an external assistant — **CIn
 
 ## Updating the assistant
 
-- When you add or rename a function in `functions/`, update `skills/functions_api.md` and the **Functions API** section of `CIndRA_role.md` in the same PR.
+- When you add or rename a function in `functions/` or change `indicators_setup` usage, update `skills/functions_api.md` and the **Functions API** section of `CIndRA_role.md` in the same PR.
 - When you introduce a new persisted artifact (figure / CSV / JSON), document it in `skills/output_conventions.md`.
 - When a new analysis notebook is added, mirror its workflow in a new `skills/<name>.md` and extend `CIndRA_role.md`.
 - After editing any markdown in `assistant/` or `assistant/skills/`, run `python assistant/build_aggregated_CIndRA.py` to refresh `aggregated_CIndRA_markdowns.md`.

@@ -32,7 +32,7 @@ outputs/
 |---|---|---|
 | `a` | `F5_Rain_daily` | `.html` (plotly) |
 | `a` | `F5_Rain_annual_max` | `.html` (plotly) |
-| `a` | `F5_Rain_accum` | `.png` |
+| `a` | `F5_Rain_accum` | `.png` (via `plot_bar_probs`) |
 | `a` | `F5_Rain_anom_top10` | `.png` |
 | `a` | `F6a_Rain_dry_season` | `.png` |
 | `a` | `F6a_Rain_wet_season` | `.png` |
@@ -48,6 +48,8 @@ outputs/
 
 Save matplotlib: `plt.savefig(site_figures_dir / build_output_filename(...), dpi=300, bbox_inches='tight')`.
 Save plotly: `fig.write_html(site_figures_dir / build_output_filename(..., ext='html'))`.
+
+Optional diagnostic filename for accumulated rainfall: `F5_Rain_accum_plot_bar_probs_<station_id>_<station_name>.png`.
 
 ### Canonical table / JSON filenames
 

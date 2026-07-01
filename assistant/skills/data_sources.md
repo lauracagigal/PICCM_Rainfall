@@ -6,7 +6,8 @@
 - **Station inventory**: `https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt` → `GHCN.download_stations_info()`.
 - **Element inventory**: `https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-inventory.txt` → `GHCN.download_station_inventory()`.
 - **Per-station daily CSVs**: `https://www.ncei.noaa.gov/data/global-historical-climatology-network-daily/access/<station_id>.csv`.
-- **Variable in use**: `PRCP` — daily precipitation total, stored in tenths of mm; downloader divides by 10. **Units returned: mm**.
+- **Variable in use**: `PRCP` — daily precipitation total, stored in tenths of mm; downloader divides by 10.
+- **Units after conversion**: daily rainfall **mm/day**; annual accumulated rainfall **mm/year**.
 - **Sentinels**: `-9999` → NaN inside `extract_dict_data_var`.
 - **Documentation**: `https://www.ncei.noaa.gov/data/global-historical-climatology-network-daily/doc/GHCND_documentation.pdf`.
 - **Citation**: Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012. *An overview of the Global Historical Climatology Network-Daily Database.* J. Atmos. Oceanic Technol., 29, 897-910.
@@ -38,5 +39,5 @@ Notebooks `b` and `c` additionally filter to years with ≥ 300 daily observatio
 
 - Always attribute sources in narrative outputs ("Source: GHCN-Daily station <id>", "Source: NOAA ONI").
 - Never invent GHCN station IDs; resolve via site config and `GHCN.get_country_code`.
-- Always state units: **mm**, **mm/year**, **days/year**.
+- Always state units: **mm**, **mm/day**, **mm/year**, **days/year**.
 - Never present user-uploaded data as primary without explicit user instruction.

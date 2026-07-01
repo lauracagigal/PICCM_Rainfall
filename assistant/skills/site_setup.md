@@ -37,8 +37,10 @@ Define a new analysis site interactively, pick the right GHCN-Daily station, and
 - After saving the config, recommend opening `a_Total_rainfall.ipynb` next.
 
 ### Hard rules
+
 - Do not re-run `00_site_setup.ipynb` unless the user changes site/station or the cached pickle is missing.
 - Never write site config outside `data/sites/`.
 - Never write GHCN pickles outside `data/rainfall/`.
 - Always name pickles `GHCN_<ghcn_station_id>.pkl` (per station, not per site).
 - Variable of interest for this workflow is **`PRCP`** (daily precipitation, mm).
+- The QC plot in Step 10 is a quick-look matplotlib overlay only — not a published figure. Published figures in downstream notebooks must use `ind_setup` helpers after function discovery.
